@@ -212,13 +212,21 @@ setInterval(() => {
 
 window.addEventListener("DOMContentLoaded", () => {
   const compilerImage = document.getElementById("compilerImage");
+  const compilerImage2 = document.getElementById("AIImage");
 
   // 사용할 이미지 2장
   const images = ["images/result.png", "images/code.png"];
+  const images2 = ["images/AI_result.png", "images/AI_code.png"];
   let index = 0;
+  let index2 = 0;
 
   setInterval(() => {
     index = (index + 1) % images.length;
     compilerImage.src = images[index];
   }, 3000); // 3초마다 변경
+
+  setInterval(() => {
+    index2 = (index2 + 1) % images2.length;
+    compilerImage2.src = images2[index2];
+  }, 4000); // 3초마다 변경
 });
